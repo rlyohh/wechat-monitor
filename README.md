@@ -263,11 +263,10 @@ wechat-monitor/
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=rlyohh/wechat-monitor&type=Date)](https://star-history.com/#rlyohh/wechat-monitor&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=rlyohh/wechat-monitor&type=Date)](https://www.star-history.com/#rlyohh/wechat-monitor&Date)
 
 ---
 
 ⭐ 如果这个项目对你有帮助，请给个 Star！
 
 📞 有问题？[提交 Issue](https://github.com/rlyohh/wechat-monitor/issues) 或 [讨论](https://github.com/rlyohh/wechat-monitor/discussions)
-```

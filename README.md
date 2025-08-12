@@ -1,4 +1,3 @@
-```markdown
 # 🔍 WeChat Status Monitor
 
 [![GitHub Actions](https://github.com/rlyohh/wechat-monitor/workflows/WeChat%20Status%20Monitor/badge.svg)](https://github.com/rlyohh/wechat-monitor/actions)
@@ -21,19 +20,18 @@
 
 ```mermaid
 graph TD
-    A[GitHub Actions 触发] --> B[获取网页内容]
-    B --> C[解析 HTML 查找 WeChat]
-    C --> D[检查 p 标签状态]
-    D --> E{状态是否为 OPEN?}
-    E -->|是| F[与上次状态比较]
-    E -->|否| G[记录当前状态]
-    F --> H{是否为新 OPEN?}
-    H -->|是| I[发送邮件通知]
-    H -->|否| G
-    I --> G
-    G --> J[保存状态到文件]
-    J --> K[等待下次检查]
-```
+   A[GitHub Actions 触发] --> B[获取网页内容]
+   B --> C[解析 HTML 查找 WeChat]
+   C --> D[检查 p 标签状态]
+   D --> E{状态是否为 OPEN?}
+   E -->|是| F[与上次状态比较]
+   E -->|否| G[记录当前状态]
+   F --> H{是否为新 OPEN?}
+   H -->|是| I[发送邮件通知]
+   H -->|否| G
+   I --> G
+   G --> J[保存状态到文件]
+   J --> K[等待下次检查]
 
 ## 🚀 快速开始
 

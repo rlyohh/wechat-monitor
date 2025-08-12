@@ -84,8 +84,8 @@ def save_current_status(status_data):
         print(f"⚠️  保存状态失败: {e}")
 
 
-def monitor_RoomsX_status(url, email_config):
-    """监控RoomsX状态"""
+def monitor_WeChat_status(url, email_config):
+    """监控WeChat状态"""
     try:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -100,7 +100,7 @@ def monitor_RoomsX_status(url, email_config):
         open_items = []
 
         for h3 in h3_tags:
-            if h3.get_text(strip=True) == 'RoomsX':
+            if h3.get_text(strip=True) == 'WeChat':
                 next_sibling = h3.find_next_sibling('p')
 
                 if next_sibling:
@@ -145,7 +145,7 @@ def monitor_RoomsX_status(url, email_config):
 
         # 输出结果
         print(f"🔍 检查完成 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"📊 找到 {len(current_items)} 个RoomsX项目")
+        print(f"📊 找到 {len(current_items)} 个WeChat项目")
         print(f"🟢 当前OPEN状态: {len(open_items)} 个")
         print(f"🆕 新增OPEN状态: {len(newly_opened)} 个")
 
@@ -156,7 +156,7 @@ def monitor_RoomsX_status(url, email_config):
         # 只对新增的OPEN状态发送邮件
         if newly_opened:
             current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            subject = f"🚨 RoomsX状态变更通知 - {len(newly_opened)}个新OPEN状态"
+            subject = f"🚨 WeChat状态变更通知 - {len(newly_opened)}个新OPEN状态"
 
             links_info = []
             for i, item in enumerate(newly_opened, 1):
@@ -166,7 +166,7 @@ def monitor_RoomsX_status(url, email_config):
                 links_info.append("")
 
             body = f"""
-🎉 检测到RoomsX状态新变更为OPEN！
+🎉 检测到WeChat状态新变更为OPEN！
 
 ⏰ 检测时间: {current_time}
 🌐 监控网址: {url}
@@ -197,7 +197,7 @@ def monitor_RoomsX_status(url, email_config):
 
 def main():
     """主函数"""
-    print("🚀 GitHub Actions - RoomsX状态监控")
+    print("🚀 GitHub Actions - WeChat状态监控")
     print(f"⏰ 运行时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
     
     # 从环境变量读取配置
@@ -220,7 +220,7 @@ def main():
     url = "https://departures.to/tags/chat"
     
     try:
-        has_new_open = monitor_RoomsX_status(url, email_config)
+        has_new_open = monitor_WeChat_status(url, email_config)
         print(f"📊 监控完成: {'发现新状态' if has_new_open else '无新变化'}")
         return True
     except Exception as e:

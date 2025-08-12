@@ -42,4 +42,6 @@ jobs:
         git config --local user.name "rlyohh"
         git add last_status.json || true
         git commit -m "Update status file [skip ci]" || true
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        git push || true
         git push || true

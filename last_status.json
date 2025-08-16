@@ -1,13 +1,21 @@
 {
-  "open_items": {},
+  "open_items": {
+    "WeChat_https://departures.to/apps/17932": {
+      "h3_content": "WeChat",
+      "p_content": "open",
+      "status": "open",
+      "link": "https://departures.to/apps/17932",
+      "timestamp": "2025-08-16T04:47:40.397234"
+    }
+  },
   "all_items": [
     {
       "h3_content": "WeChat",
-      "p_content": "full",
-      "status": "full",
+      "p_content": "open",
+      "status": "open",
       "link": "https://departures.to/apps/17932",
-      "timestamp": "2025-08-16T04:25:26.110428"
+      "timestamp": "2025-08-16T04:47:40.397234"
     }
   ],
-  "last_check": "2025-08-16T04:25:26.110550"
+  "last_check": "2025-08-16T04:47:40.397356"
 }
